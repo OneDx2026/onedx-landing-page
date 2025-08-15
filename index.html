@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDx - 伝わる資料に、プロの一手間を。ドキュメント最適化サービス</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 日本語はNoto Sans JP、英数字はInterを適用 */
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #F9FAFB; /* 少しだけグレーの背景 */
+        }
+        /* カスタムカラー */
+        .onedx-green { color: #6A8A82; }
+        .onedx-green-bg { background-color: #6A8A82; }
+        .onedx-darkblue { color: #1A365D; }
+        .onedx-darkblue-bg { background-color: #1A365D; }
+
+        /* 見出しのスタイル */
+        h2 {
+            font-size: 2.25rem; /* 36px */
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4rem; /* 64px */
+        }
+        
+        /* スムーズスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- ロゴ -->
+                <img src="onedx-logo.jpg" alt="OneDx Logo" class="h-12 w-auto mr-4">
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#problem" class="text-gray-600 hover:onedx-green transition">お悩み</a>
+                <a href="#services" class="text-gray-600 hover:onedx-green transition">サービス内容</a>
+                <a href="#profile" class="text-gray-600 hover:onedx-green transition">プロフィール</a>
+                <a href="#flow" class="text-gray-600 hover:onedx-green transition">ご依頼の流れ</a>
+                <a href="#contact" class="onedx-darkblue-bg text-white font-bold py-2 px-6 rounded-full hover:opacity-90 transition">今すぐ相談する</a>
+            </nav>
+            <!-- モバイルメニューボタン（ハンバーガー） -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white py-4">
+            <a href="#problem" class="block text-center py-2 text-gray-600 hover:onedx-green transition">お悩み</a>
+            <a href="#services" class="block text-center py-2 text-gray-600 hover:onedx-green transition">サービス内容</a>
+            <a href="#profile" class="block text-center py-2 text-gray-600 hover:onedx-green transition">プロフィール</a>
+            <a href="#flow" class="block text-center py-2 text-gray-600 hover:onedx-green transition">ご依頼の流れ</a>
+            <a href="#contact" class="block text-center mt-2 mx-auto w-4/5 onedx-darkblue-bg text-white font-bold py-2 px-6 rounded-full hover:opacity-90 transition">今すぐ相談する</a>
+        </div>
+    </header>
+
+    <!-- メインビジュアル -->
+    <main>
+        <section class="bg-white pt-16 pb-20">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold onedx-darkblue leading-tight mb-4">
+                            その資料、<br class="md:hidden">プロが仕上げます。
+                        </h1>
+                        <p class="text-lg md:text-xl onedx-green font-bold mb-6">伝わる資料に、プロの一手間を。ドキュメント最適化サービス</p>
+                        <p class="text-gray-600 leading-relaxed">
+                            ご自身で作成した資料、AI生成ドキュメント、翻訳後の資料など、あらゆるビジネス文書を「伝わる」かたちへ。
+                            法律事務所で培った知見と技術で、Word、Excel、PowerPointの資料をプロ品質に整えます。
+                            その一手間で、あなたのビジネスの信頼性は格段に向上します。
+                        </p>
+                        <a href="#contact" class="mt-8 inline-block onedx-darkblue-bg text-white font-bold text-lg py-4 px-10 rounded-full hover:opacity-90 transition shadow-lg">
+                            まずは無料で相談する
+                        </a>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="onedx-logo.jpg" alt="犬がパソコンを使っているイラスト" class="w-4/5 md:w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お悩みセクション -->
+        <section id="problem" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="onedx-darkblue">その資料、<span class="onedx-green">本当に大丈夫？</span></h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold onedx-darkblue mb-4">自分で作った資料</h3>
+                        <p class="text-gray-600">内容は良いはずなのに、なぜか素人っぽく見えてしまう。デザインやレイアウトを整える時間も知識もない。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold onedx-darkblue mb-4">AIが作った"たたき台"</h3>
+                        <p class="text-gray-600">AIが作った文章や資料は一見完璧。でも、細かいニュアンスが違ったり、レイアウトが崩れていたり。仕上げの一手間が必要。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-bold onedx-darkblue mb-4">引き継いだ資料</h3>
+                        <p class="text-gray-600">前任者が作った資料のフォーマットがバラバラ。修正したいけれど、どこから手をつけていいか分からない。</p>
+                    </div>
+                </div>
+                <div class="text-center mt-16">
+                    <p class="text-2xl font-bold onedx-darkblue">
+                        OneDxがその「あともう一歩」を解決。<br>
+                        <span class="onedx-green">あなたの想いが伝わる、最高品質のドキュメントへ。</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- サービス内容 -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="onedx-darkblue">サービス内容</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- サービスカード 1 -->
+                    <div class="border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center mb-4">
+                            <div class="onedx-darkblue-bg p-3 rounded-md mr-4">
+                                <!-- AI アイコン -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold onedx-darkblue">AI生成コンテンツの<br>リファイン（清書・校正）</h3>
+                        </div>
+                        <p class="text-gray-600">AIが生成した文章、翻訳、資料をプロの視点で校正・校閲。ニュアンスの調整、専門用語の統一、レイアウトの最適化を行い、信頼性の高いドキュメントに仕上げます。</p>
+                    </div>
+
+                    <!-- サービスカード 2 -->
+                    <div class="border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center mb-4">
+                             <div class="onedx-darkblue-bg p-3 rounded-md mr-4">
+                                <!-- Word アイコン -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4zm3.5 4.5a.5.5 0 000 1h5a.5.5 0 000-1h-5zM7 9.5a.5.5 0 000 1h5a.5.5 0 000-1h-5zm0 2.5a.5.5 0 000 1h2a.5.5 0 000-1h-2z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold onedx-darkblue">各種ドキュメント作成・<br>フォーマット調整</h3>
+                        </div>
+                        <p class="text-gray-600">契約書、社内規定、マニュアルなどの各種ビジネス文書をWordで作成。既存文書のフォーマット統一や目次作成、スタイル設定なども行います。</p>
+                    </div>
+
+                    <!-- サービスカード 3 -->
+                    <div class="border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center mb-4">
+                            <div class="onedx-darkblue-bg p-3 rounded-md mr-4">
+                                <!-- PowerPoint アイコン -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 0H4v10h12V5zM6 7a1 1 0 00-1 1v4a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1H6zm1 2h6v2H7V9z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold onedx-darkblue">プレゼン資料・講義資料の<br>デザイン調整</h3>
+                        </div>
+                        <p class="text-gray-600">PowerPointで作成されたプレゼン資料やセミナー資料を、より見やすく、伝わりやすくリデザイン。レイアウト調整、図版作成、アニメーション設定まで対応します。</p>
+                    </div>
+                    
+                    <!-- サービスカード 4 -->
+                    <div class="border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center mb-4">
+                             <div class="onedx-darkblue-bg p-3 rounded-md mr-4">
+                                <!-- Excel アイコン -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V7a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold onedx-darkblue">Excelでのデータ整理・<br>表作成</h3>
+                        </div>
+                        <p class="text-gray-600">請求書や見積書などの帳票作成、データ入力、グラフ作成など、Excelに関する作業をサポート。関数やピボットテーブルを使ったデータ集計もご相談ください。</p>
+                    </div>
+
+                    <!-- サービスカード 5 -->
+                    <div class="border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center mb-4">
+                            <div class="onedx-darkblue-bg p-3 rounded-md mr-4">
+                                <!-- PDF アイコン -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4zm1 4a1 1 0 100 2h8a1 1 0 100-2H5zm0 4a1 1 0 100 2h8a1 1 0 100-2H5zm0 4a1 1 0 100 2h3a1 1 0 100-2H5z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold onedx-darkblue">PDFからの<br>Word化・データ化</h3>
+                        </div>
+                        <p class="text-gray-600">PDFファイルを編集可能なWordファイルに変換します。単純な変換だけでなく、レイアウトの崩れや文字化けを丁寧に修正し、すぐに使える状態でお渡しします。</p>
+                    </div>
+
+                    <!-- サービスカード 6 -->
+                    <div class="border border-gray-200 rounded-lg p-8 shadow-sm hover:shadow-lg transition">
+                        <div class="flex items-center mb-4">
+                             <div class="onedx-darkblue-bg p-3 rounded-md mr-4">
+                                <!-- 相談 アイコン -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold onedx-darkblue">Microsoft Officeの<br>操作サポート</h3>
+                        </div>
+                        <p class="text-gray-600">「ここだけわからない」「うまく動かない」といったOfficeソフトに関するお悩みを解決。オンラインで画面を共有しながらのレクチャーも可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- プロフィール -->
+        <section id="profile" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="onedx-darkblue">プロフィール</h2>
+                <div class="bg-white rounded-lg shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 text-center mb-8 md:mb-0">
+                        <!-- プロフィールアイコン -->
+                        <div class="w-40 h-40 mx-auto rounded-full onedx-darkblue-bg flex items-center justify-center mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold onedx-darkblue">Yuka</h3>
+                        <p class="onedx-green">ドキュメントスペシャリスト</p>
+                    </div>
+                    <div class="md:w-2/3 md:pl-12">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            大手法律事務所にて、弁護士秘書として10年、文書課のドキュメントスペシャリストとして5年、合計15年間勤務。日々、裁判所や官公庁、クライアントに提出する重要書類の作成・調整に携わってまいりました。
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            求められるのは、1文字のミスも許されない正確性と、誰が見ても分かりやすい構成力、そして高度な機密保持。その厳しい環境で培ったスキルと経験を活かし、お客様のビジネスをドキュメントの面から力強くサポートしたいという想いから「OneDx」を立ち上げました。
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            子育てと両立しながら、フリーランスとして活動しています。お客様一人ひとりに寄り添い、丁寧で迅速な対応を心がけています。どんな些細なことでも、お気軽にご相談ください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ご依頼の流れ -->
+        <section id="flow" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="onedx-darkblue">ご依頼の流れ</h2>
+                <div class="relative">
+                    <!-- 縦線 -->
+                    <div class="hidden md:block border-l-2 border-dashed onedx-green absolute h-full top-0" style="left: 50%;"></div>
+                    
+                    <!-- ステップ 1 -->
+                    <div class="mb-12 md:flex items-center">
+                        <div class="md:w-1/2 md:pr-8">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-2">
+                                    <span class="onedx-green-bg text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">1</span>
+                                    <h3 class="text-xl font-bold onedx-darkblue">お問い合わせ</h3>
+                                </div>
+                                <p class="text-gray-600">まずは下部のフォームより、ご依頼内容の概要やご希望の納期などをお聞かせください。24時間以内に返信いたします。</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+
+                    <!-- ステップ 2 -->
+                    <div class="mb-12 md:flex flex-row-reverse items-center">
+                        <div class="md:w-1/2 md:pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-2">
+                                    <span class="onedx-green-bg text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">2</span>
+                                    <h3 class="text-xl font-bold onedx-darkblue">ヒアリング・お見積もり</h3>
+                                </div>
+                                <p class="text-gray-600">メールやオンラインMTGにて、詳細なご要望をヒアリングさせていただきます。作業内容と工数に基づき、正式なお見積もりを提示します。</p>
+                            </div>
+                        </div>
+                         <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+
+                    <!-- ステップ 3 -->
+                    <div class="mb-12 md:flex items-center">
+                        <div class="md:w-1/2 md:pr-8">
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-2">
+                                    <span class="onedx-green-bg text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">3</span>
+                                    <h3 class="text-xl font-bold onedx-darkblue">ご発注・作業開始</h3>
+                                </div>
+                                <p class="text-gray-600">お見積もりにご納得いただけましたら、正式にご発注ください。秘密保持契約の締結も可能です。速やかに作業に着手いたします。</p>
+                            </div>
+                        </div>
+                         <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+
+                    <!-- ステップ 4 -->
+                    <div class="md:flex flex-row-reverse items-center">
+                        <div class="md:w-1/2 md:pl-8">
+                             <div class="bg-white p-6 rounded-lg shadow-md">
+                                <div class="flex items-center mb-2">
+                                    <span class="onedx-green-bg text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">4</span>
+                                    <h3 class="text-xl font-bold onedx-darkblue">納品・アフターフォロー</h3>
+                                </div>
+                                <p class="text-gray-600">完成したデータをお渡しします。納品後、修正点などがございましたら、迅速に対応いたしますのでご安心ください。</p>
+                            </div>
+                        </div>
+                         <div class="hidden md:block md:w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="onedx-darkblue">お問い合わせ</h2>
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-center text-gray-700 mb-8">
+                        資料作成に関するお悩み、お見積もりのご依頼など、お気軽にご連絡ください。<br>
+                        内容を確認後、1営業日以内に担当より返信いたします。
+                    </p>
+                    <form>
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">お名前</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-onedx-green" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">メールアドレス</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-onedx-green" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">お問い合わせ内容</label>
+                            <textarea id="message" name="message" rows="6" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-onedx-green" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="onedx-darkblue-bg text-white font-bold text-lg py-4 px-12 rounded-full hover:opacity-90 transition shadow-lg">
+                                送信する
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="onedx-darkblue-bg text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 OneDx. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // モバイルメニューの開閉
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // メニュー項目クリックでメニューを閉じる
+        const menuLinks = document.querySelectorAll('#mobile-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
